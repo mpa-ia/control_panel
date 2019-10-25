@@ -1,8 +1,11 @@
-@import 'variables';
-@import 'mixins';
+@import './variables';
+@import './mixins';
 
-@import 'normalize';
-@import 'layout';
+@import './font';
+@import './normalize';
+@import './layout';
+
+@import './typography';
 
 /* Components */
 
