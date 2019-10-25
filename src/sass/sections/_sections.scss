@@ -1,0 +1,68 @@
+.aside {
+    background: $main-dark-color;
+    min-height: 100vh;
+    color: $main-lighten-color;
+    width: 200px;
+    @include no-spacing;
+    z-index: 1;
+
+    &__logo {
+        @include flex (row, baseline, space-between);
+        @include centered-text ($standard-box-height * 2);
+        margin: 8px 0 20px 0;
+
+        > * {
+            padding: 5px 10px;
+        }
+
+        i {
+            font-size: $basic-font-size * 2.2;
+        }
+    }
+
+    &__links {
+
+        > li {
+            border-left: 2px solid $main-dark-color;
+            display: block;
+            @include centered-text ($standard-box-height * 2.3);
+        }
+        li:hover {
+            border-left: 2px solid $detail-orange-color;
+            background: #2e2e2e;
+        }
+    }
+}
+
+.nav {
+    background: $main-light-color;
+    width: calc(100vw - 200px);
+    @include border;
+    height: 60px;
+    padding: 0;
+    z-index: 0;
+
+    &__links {
+        height: 100%;
+        @include centered-text ($standard-box-height * 3);
+        @include flex (row, center, flex-end);
+
+        > * {
+            display: inline-block;
+            padding: 0 12px;
+            border-left: 2px solid $decoration-grey-color;
+            height: 100%;
+        }
+    }
+}
+
+.un-list {
+    @include no-spacing;
+
+    a {
+        text-decoration: none;
+        color: $text-grey-color;
+        font-size: $basic-font-size * 1.4;
+        padding: 10px 7px;
+    }
+}
