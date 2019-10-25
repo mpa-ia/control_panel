@@ -1,0 +1,51 @@
+/* Colors */
+$main-dark-color: #222222;
+$main-light-color: #ffffff;
+$main-lighten-color: #F7F7F7;
+
+$text-grey-color: #A1A1A1;
+
+$decoration-grey-color: #E8E8E8;
+
+$detail-orange-color: #e58e26;
+$detail-blue-color: #3498db;
+
+/* Font sizes */
+$basic-font-size: 12px;
+$standard-box-height: 20px;
+
+/* Fonts */
+$logo-font: 'Satisfy', cursive;
+$decoration-font: 'Glyphter', Helvetica, Arial;
+$header-font: 'Saira Condensed', sans-serif;
+$paragraph-text: 'Open Sans', sans-serif;
+
+@mixin flex($flex-direction, $align-items, $justify-content) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin border {
+    border-bottom: 2px solid $decoration-grey-color;
+    padding: 5px 0;
+    width: 100%;
+}
+
+@mixin center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centered-text ($font-size) {
+      height: $font-size;
+      line-height: $font-size;
+}
+
+@mixin no-spacing {
+    margin: 0;
+    padding: 0;
+}
