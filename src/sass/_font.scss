@@ -9,15 +9,17 @@
     font-weight: normal;
     font-style: normal;
 }
-[class*='icon-']:before{
+[class*='icon-']:before {
 	display: inline-block;
    font-family: 'Glyphter';
    font-style: normal;
    font-weight: normal;
    line-height: 1;
+   padding: 0 6px;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
+
 .icon-arrow-down:before{content:'\0041';}
 .icon-arrow-down-small:before{content:'\0042';}
 .icon-arrow-left:before{content:'\0043';}
