@@ -1,76 +1,124 @@
 .aside {
-    background: $main-dark-color;
-    min-height: 100vh;
-    color: $main-lighten-color;
-    width: 200px;
-    @include no-spacing;
-    z-index: 1;
+  background: $main-dark-color;
+  min-height: 100vh;
+  color: $main-lighten-color;
+  width: 200px;
+  @include no-spacing;
+  z-index: 1;
 
-    &__logo {
-        @include flex (row, baseline, space-between);
-        @include centered-text ($standard-box-height * 2);
-        margin: 8px 0 20px 0;
+  &__logo {
+    @include flex (row, baseline, space-between);
+    @include centered-text ($standard-box-height * 2);
+    margin: 8px 0 20px 0;
 
-        > * {
-            padding: 5px 10px;
-        }
-
-        i {
-            font-size: $basic-font-size * 2.2;
-        }
+    > * {
+      padding: 5px 10px;
     }
 
-    &__links {
-
-        > li {
-            border-left: 2px solid $main-dark-color;
-            display: block;
-            @include centered-text ($standard-box-height * 2.3);
-        }
-
-        li:hover {
-            border-left: 2px solid $detail-orange-color;
-            background: #2e2e2e;
-        }
+    i {
+      font-size: $basic-font-size * 2.2;
     }
+  }
+
+  &__links {
+    > li {
+      border-left: 2px solid $main-dark-color;
+      display: block;
+      @include centered-text ($standard-box-height * 2.3);
+    }
+
+    li:hover {
+      border-left: 2px solid $detail-orange-color;
+      background: #2e2e2e;
+    }
+  }
 }
 
 .nav {
-    background: $main-light-color;
-    width: calc(100vw - 200px);
-    @include border;
-    height: 60px;
-    padding: 0;
-    z-index: 0;
+  background: $main-light-color;
+  width: calc(100vw - 200px);
+  @include border;
+  height: 60px;
+  padding: 0;
+  z-index: 0;
 
-    &__links {
-        height: 100%;
-        @include centered-text ($standard-box-height * 3);
-        @include flex (row, center, flex-end);
+  &__links {
+    height: 100%;
+    @include centered-text ($standard-box-height * 3);
+    @include flex (row, center, flex-end);
 
-        > * {
-            display: inline-block;
-            padding: 0 12px;
-            border-left: 2px solid $decoration-grey-color;
-            height: 100%;
-        }
+    > * {
+      display: inline-block;
+      padding: 0 12px;
+      border-left: 2px solid $decoration-grey-color;
+      height: 100%;
     }
+    
+    a {
+      position: relative;
+    }
+
+    .icon-notification::after {
+      @include round-elem ($standard-box-height / 2.3);
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      transform: translate(-25%, -25%);
+      content: '';
+      background: $detail-orange-color;
+    }
+  }
 }
 
 .un-list {
-    @include no-spacing;
+  @include no-spacing;
 
-    a {
-        text-decoration: none;
-        color: $text-grey-color;
-        font-size: $basic-font-size * 1.4;
-        padding: 10px 7px;
-    }
+  a {
+    text-decoration: none;
+    color: $text-grey-color;
+    font-size: $basic-font-size * 1.4;
+    padding: 10px 7px;
+  }
 }
 
 section {
-    margin: 30px 0;
-    padding: 0;
-    background: $main-light-color;
-    box-shadow: -1px -1px 4px 1px $decoration-grey-color;
+  margin: 30px 0;
+  padding: 0;
+  background: $main-light-color;
+  box-shadow: -1px -1px 4px 1px $decoration-grey-color;
+}
+
+.manager {
+  @include flex (row, center, flex-start);
+  padding: 0 10px;
+
+  &__img {
+    overflow: hidden;
+    @include round-elem ($standard-box-height * 2.5);
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transform: scale(2);
+    }
+  }
+    
+  a {
+    color: $detail-blue-color;
+    text-decoration: none;
+    padding: 0 8px;
+    position: relative;
+
+    &::after {
+      background: $success-color;
+      @include round-elem ($standard-box-height / 1.5);
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      transform: translate(16%, 16%);
+      content: '';
+      z-index: 1;
+    }
+  }
 }
