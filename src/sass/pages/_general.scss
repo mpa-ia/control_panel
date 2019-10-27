@@ -1,6 +1,11 @@
-#general {
+.general {
 
     .table {
         display: inline-block;
+    }
+
+    &__chart {
+        margin: 40px auto;
+        padding: 0 40px;
     }
 }
