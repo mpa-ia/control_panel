@@ -10,6 +10,8 @@ $decoration-grey-color: #E8E8E8;
 $detail-orange-color: #e58e26;
 $detail-blue-color: #3498db;
 
+$success-color: #4cd137;
+
 /* Font sizes */
 $basic-font-size: 12px;
 $standard-box-height: 20px;
@@ -41,11 +43,18 @@ $paragraph-text: 'Open Sans', sans-serif;
 }
 
 @mixin centered-text ($font-size) {
-      height: $font-size;
-      line-height: $font-size;
+    height: $font-size;
+    line-height: $font-size;
 }
 
 @mixin no-spacing {
     margin: 0;
     padding: 0;
+}
+
+@mixin round-elem ($dimension) {
+    width: $dimension;
+    height: $dimension;
+    border-radius: 50%;
+    margin: 0;
 }
