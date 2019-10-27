@@ -52,7 +52,6 @@
   @include border;
   height: 60px;
   padding: 0;
-  z-index: 0;
 
   &__links {
     height: 100%;
@@ -150,4 +149,5 @@ section {
   padding: 40px 0;
   text-align: center;
   overflow: auto;
+  margin-bottom: 20px;
 }
