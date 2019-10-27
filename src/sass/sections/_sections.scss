@@ -6,6 +6,7 @@
   @include no-spacing;
   z-index: 1;
   text-align: left;
+  transition: $transition;
 
   &__logo {
     @include flex (row, baseline, space-between);
@@ -33,6 +34,16 @@
       background: #2e2e2e;
     }
   }
+}
+
+.aside.hidden {
+  transform: translateX(-160px);
+  transition: $transition;
+}
+
+.aside.hidden ~ main {
+  margin-left: 40px;
+  transition: $transition;
 }
 
 .nav {
