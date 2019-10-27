@@ -68,6 +68,16 @@
       content: '';
       background: $detail-orange-color;
     }
+
+    .icon-profile {
+      color: $detail-blue-color;
+      font-size: $basic-font-size * 1.1;
+
+      &::before {
+        color: $text-grey-color;
+        font-size: $basic-font-size * 1.3;
+      }
+    }
   }
 }
 
