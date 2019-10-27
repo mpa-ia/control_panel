@@ -1,0 +1,101 @@
+.component {  
+
+
+  &__btn {
+    background: $detail-orange-color;
+    border: none;
+    font-size: $basic-font-size * 1.5;
+    color: $main-light-color;
+    text-align: center;
+    border-radius: 5px;
+    @include centered-text($standard-box-height * 2);
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      background: $text-grey-color;
+    }
+
+    &.add {
+      padding: 0 10px;
+      margin: 20px 0;
+    }
+
+    &.icon-refresh {
+      width: $standard-box-height * 2;
+      font-size: $basic-font-size;
+    }
+  }
+
+
+  &__date {
+    margin: 0;
+    padding: 5px;
+    border: 1px solid $decoration-grey-color;
+    @include centered-text($standard-box-height * 2);
+
+    &.right {
+      border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      border-left: none;
+    }
+
+    &.left {
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+      border-right: none;
+    }
+  }
+}
+
+.table {
+  margin: 10px;
+  border-collapse: collapse;
+  @include flex (row, baseline, center);
+  font-size: $basic-font-size;
+
+  &__row {
+    @include border;
+    height: $standard-box-height * 2;
+    transition: $transition;
+    
+    &:hover {
+      background: $main-lighten-color;
+
+      .table__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  th {
+    padding: 2px 10px;
+
+  }
+
+  &__title {
+    text-align: left;
+    color: $text-grey-color;
+    font-size: $basic-font-size * 1.1;
+  }
+
+  &__data {
+    font-weight: 300;
+    text-align: right;
+    width: 200px;
+  }
+
+  &__link {
+    font-weight: 300;
+    width: 300px;
+  }
+
+  &__icon {
+    opacity: 0;
+
+    > *:hover {
+      color: $detail-orange-color;
+      cursor: pointer;
+    }
+  }
+}
