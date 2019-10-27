@@ -123,3 +123,10 @@ section {
     }
   }
 }
+
+.date-picker {
+  @include border;
+  padding: 40px 0;
+  text-align: center;
+  overflow: auto;
+}
