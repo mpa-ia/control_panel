@@ -5,6 +5,7 @@
   width: 200px;
   @include no-spacing;
   z-index: 1;
+  text-align: left;
 
   &__logo {
     @include flex (row, baseline, space-between);
