@@ -16,3 +16,11 @@ h2 {
     font-family: $header-font;
     text-align: left;
 }
+
+h3 {
+    font-size: $basic-font-size * 1.1;
+    color: $text-grey-color;
+    text-transform: uppercase;
+    padding: 8px 5px;
+    text-align: left;
+}
