@@ -4,26 +4,42 @@ hamburger.addEventListener('click', function () {
   aside.classList.toggle('hidden');
 });
 
+const navWrapper = document.querySelector('.nav');
+const asideWrapper = document.querySelector('.aside');
 
-const logout = document.querySelector('.icon-quit');
-const login = document.querySelector('.icon-profile');
+const navLogout = navWrapper.querySelector('.icon-quit');
+const navLogin = navWrapper.querySelector('.icon-profile');
+
+const asideLogout = asideWrapper.querySelector('.icon-quit');
+const asideLogin = asideWrapper.querySelector('.icon-profile');
+
 const modal = document.querySelector('.pop-up');
-
 const modalQuit = document.querySelector('.pop-up__quit');
 const modalLogin = document.querySelector('.pop-up__login');
 
 const quitButton = document.querySelector('.quit');
-
 const closeButton = document.querySelector('.icon-close');
 
 
-logout.addEventListener('click', function () {
+navLogout.addEventListener('click', function () {
   event.preventDefault();
   modal.classList.add('active');
   modalQuit.classList.add('active');
 });
 
-login.addEventListener('click', function () {
+asideLogout.addEventListener('click', function () {
+  event.preventDefault();
+  modal.classList.add('active');
+  modalQuit.classList.add('active');
+});
+
+navLogin.addEventListener('click', function () {
+  event.preventDefault();
+  modal.classList.add('active');
+  modalLogin.classList.add('active');
+});
+
+asideLogin.addEventListener('click', function () {
   event.preventDefault();
   modal.classList.add('active');
   modalLogin.classList.add('active');

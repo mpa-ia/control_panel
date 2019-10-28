@@ -1,6 +1,6 @@
 .aside {
   background: $main-dark-color;
-  min-height: 100vh;
+  height: 100%;
   color: $main-lighten-color;
   width: 200px;
   @include no-spacing;
@@ -65,10 +65,6 @@
       border-left: 2px solid $decoration-grey-color;
       height: 100%;
     }
-    
-    a {
-      position: relative;
-    }
 
     .icon-notification::after {
       @include round-elem ($standard-box-height / 2.3);
@@ -98,9 +94,20 @@
   a {
     text-decoration: none;
     color: $text-grey-color;
-    font-size: $basic-font-size * 1.4;
+    font-size: $basic-font-size * 1.5;
     padding: 10px 7px;
+    position: relative;
   }
+}
+
+.list-vertical {
+  text-align: right;
+  display: none;
+
+  > * {
+    padding: 5px 0;
+  }
+
 }
 
 section {
