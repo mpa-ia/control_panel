@@ -25,24 +25,12 @@
     }
   }
 
-
   &__date {
     margin: 0;
     padding: 5px;
     border: 1px solid $decoration-grey-color;
+    border-radius: 5px;
     @include centered-text($standard-box-height * 2);
-
-    &.right {
-      border-bottom-right-radius: 6px;
-      border-top-right-radius: 6px;
-      border-left: none;
-    }
-
-    &.left {
-      border-bottom-left-radius: 6px;
-      border-top-left-radius: 6px;
-      border-right: none;
-    }
   }
 }
 
@@ -151,6 +139,7 @@
   &.pop-up {
     opacity: 0.6;
   }
+
   &[class*='pop-up__'] {
     opacity: 1;
   }
