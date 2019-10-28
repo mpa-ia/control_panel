@@ -16,7 +16,9 @@ $success-color: #4cd137;
 $basic-font-size: 12px;
 $standard-box-height: 20px;
 
-$transition: all 1s;
+$transition-general: all 1s;
+$transition-background: background 0.5s;
+$transition-visibility: visibility 0.5s, linear 0.5s, opacity 0.5s;
 
 /* Fonts */
 $logo-font: 'Satisfy', cursive;

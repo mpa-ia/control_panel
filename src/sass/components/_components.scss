@@ -7,7 +7,7 @@
     text-align: center;
     border-radius: 5px;
     @include centered-text($standard-box-height * 2);
-    transition: $transition;
+    transition: $transition-background;
 
     &:hover {
       cursor: pointer;

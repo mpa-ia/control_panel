@@ -4,9 +4,8 @@
   color: $main-lighten-color;
   width: 200px;
   @include no-spacing;
-  z-index: 1;
   text-align: left;
-  transition: $transition;
+  transition: $transition-general;
 
   &__logo {
     @include flex (row, baseline, space-between);
@@ -38,12 +37,12 @@
 
 .aside.hidden {
   transform: translateX(-160px);
-  transition: $transition;
+  transition: $transition-general;
 }
 
 .aside.hidden ~ main {
   margin-left: 40px;
-  transition: $transition;
+  transition: $transition-general;
 }
 
 .nav {
