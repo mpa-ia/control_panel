@@ -6,7 +6,7 @@
   @include no-spacing;
   text-align: left;
   transition: $transition-general;
-  z-index: 0;
+  z-index: 1;
 
   &__logo {
     @include flex (row, baseline, space-between);
@@ -52,7 +52,7 @@
   @include border;
   height: 60px;
   padding: 0;
-  z-index: -1;
+  z-index: 0;
 
   &__links {
     height: 100%;

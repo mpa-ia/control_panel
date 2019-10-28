@@ -16,7 +16,7 @@
 
     &.rectangle {
       padding: 0 10px;
-      margin: 20px 0;
+      margin: 20px 5px;
     }
 
     &.icon-refresh {
@@ -109,29 +109,38 @@
   opacity: 0;
   visibility: hidden;
   transition: $transition-visibility;
-  z-index: 1;
+  z-index: 2;
+}
 
-  &__quit {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -20%);
-    background: $main-light-color;
+[class^='pop-up__'] {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+  background: $main-light-color;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 3;
+  text-align: right;
+  transition: $transition-visibility;
+
+  p {
+    @include border;
+    padding: 10px 5px;
+    text-align: left;
     width: 400px;
-    height: 200px;
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 5px;
-    padding: 5px;
-    z-index: 2;
-    text-align: right;
-    transition: $transition-visibility;
+  }
 
-    p {
-      @include border;
-      padding: 10px 5px;
-      text-align: left;
-    }
+  input {
+    margin: 10px 15px 10px 0;
+    width: 150px;
+  }
+
+  span {
+    padding: 0;
+    @include centered-text ($standard-box-height * 2);
   }
 }
 
@@ -142,7 +151,7 @@
   &.pop-up {
     opacity: 0.6;
   }
-  &.pop-up__quit {
+  &[class*='pop-up__'] {
     opacity: 1;
   }
 }
