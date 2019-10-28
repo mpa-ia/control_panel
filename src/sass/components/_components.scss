@@ -1,5 +1,4 @@
 .component {  
-
   &__btn {
     background: $detail-orange-color;
     border: none;
@@ -15,7 +14,7 @@
       background: $text-grey-color;
     }
 
-    &.add {
+    &.rectangle {
       padding: 0 10px;
       margin: 20px 0;
     }
