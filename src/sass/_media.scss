@@ -14,10 +14,31 @@
         }
     }
 
-    .table {
-        @include flex (row, baseline, center);
-        margin: 0;
+    [class*='table'], tbody {
+        display: block;
     }
+
+    .table {
+      
+        &__row {
+          height: auto;  
+        }
+
+        td[class^='table__'] {
+            padding: 2px 0;
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            margin: 0 auto;
+        }
+         
+        &__icon {
+          opacity: 1;
+
+        }
+      }
+
     main {
         margin-left: 40px;
         margin-top: 0;

@@ -35,15 +35,22 @@
 }
 
 .table {
-  margin: 10px;
+  margin: 10px auto;
   border-collapse: collapse;
-  @include flex (row, baseline, center);
   font-size: $basic-font-size;
+  width: 90%;
+  text-align: center;
+
+  tbody {
+    width: 100%;
+  }
 
   &__row {
     @include border;
     height: $standard-box-height * 2;
-    
+    width: 100%;
+    display: table-row;
+
     &:hover {
       background: $main-lighten-color;
 
@@ -53,32 +60,25 @@
     }
   }
 
-  th {
+  td[class^='table__'] {
     padding: 2px 10px;
+    width: 33%;
+    font-weight: 300;
   }
 
   &__title {
     text-align: left;
     color: $text-grey-color;
     font-size: $basic-font-size * 1.1;
-    width: 25vw;
-    max-width: 150px;
+    font-weight: 600;
   }
 
   &__data {
-    font-weight: 300;
     text-align: right;
-    width: 10vw;
-  }
-
-  &__link {
-    font-weight: 300;
-    width: 15vw;
   }
 
   &__icon {
     opacity: 0;
-    width: 20vw;
 
     > *:hover {
       color: $detail-orange-color;
