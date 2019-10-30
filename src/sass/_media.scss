@@ -1,4 +1,45 @@
 
+@media(max-width: 767px) {
+    @include grid('sm');
+
+    [class*='table'], tbody {
+        display: block;
+    }
+
+    .table {
+      
+        &__row {
+          height: auto;  
+        }
+
+        td[class^='table__'] {
+            padding: 2px 0;
+           
+            border: none;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            margin: 0 auto;
+        }
+         
+        &__icon {
+          opacity: 1;
+
+        }
+    }
+}
+  
+  @media(min-width: 768px) {
+    @include grid('md');
+}
+  
+  @media(min-width: 992px) {
+    @include grid('lg');
+}
+  
+  @media(min-width: 1200px) {
+    @include grid('xl');
+}
+
 @media (max-width: 600px) {
 
     .date-picker {
@@ -13,31 +54,6 @@
             display: none;
         }
     }
-
-    [class*='table'], tbody {
-        display: block;
-    }
-
-    .table {
-      
-        &__row {
-          height: auto;  
-        }
-
-        td[class^='table__'] {
-            padding: 2px 0;
-            /* Behave  like a "row" */
-            border: none;
-            border-bottom: 1px solid #eee;
-            width: 100%;
-            margin: 0 auto;
-        }
-         
-        &__icon {
-          opacity: 1;
-
-        }
-      }
 
     main {
         margin-left: 40px;
@@ -70,13 +86,15 @@
     }
 }
 
+
 @media (max-height: 600px) {
     .aside {
         overflow: scroll;
         
-          &__links {
+        &__links {
+
             > li {
-              @include centered-text ($standard-box-height * 1.5);
+                @include centered-text ($standard-box-height * 1.5);
             }
 
             a {

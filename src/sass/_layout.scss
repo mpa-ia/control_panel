@@ -18,9 +18,22 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1200px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1170px;
     overflow: auto;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 main {
