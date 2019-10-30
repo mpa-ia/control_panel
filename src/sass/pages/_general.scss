@@ -1,17 +1,12 @@
 .general {
 
-    .table {
-        display: inline-block;
+  &__chart {
+    margin: 40px auto;
+    padding: 0 40px;
+    width: 100%;
+
+    img {
+      width: 100%;
     }
-
-    &__chart {
-        margin: 40px auto;
-        padding: 0 40px;
-        width: 100%;
-
-        img {
-            width: 100%;
-        }
-
-    }
+  }
 }
