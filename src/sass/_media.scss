@@ -2,6 +2,62 @@
 @media(max-width: 767px) {
     @include grid('sm');
 
+    .aside {
+        height: $standard-box-height * 2.5;
+        width: 100vw;
+        
+       &__logo {
+          margin: 0;
+          height: auto;
+          box-shadow: inset 0px -2px 1px 0px $main-lighten-color;
+        }
+      
+        &__links, &__menu, &__chat {
+            display: none;
+        }
+    }
+
+    .aside.show {
+        height: 100vh;
+        transition: $transition-visibility;
+
+        > .aside__logo, .aside__chat {
+            display: flex;
+        }
+
+        .aside__links {
+            display: block;
+        }
+
+        .aside__menu {
+            position: fixed;
+            bottom: 0;
+            @include centered-text ($standard-box-height * 2.5);
+            font-size: $basic-font-size;
+            background: $decoration-grey-color;
+            width: 100%;
+            @include flex (row, center, space-around);
+
+            > * {
+                display: inline-block;
+            }
+
+            a {
+               padding: 0px 3px;
+               color: $main-dark-hover;
+               display: block;
+            }
+        }
+    }
+
+    main {
+        margin: 50px auto 20px auto;
+    }
+
+    .nav {
+        display: none;
+    }
+
     [class*='table'], tbody {
         display: block;
     }
@@ -53,19 +109,6 @@
         span {
             display: none;
         }
-    }
-
-    main {
-        margin-left: 40px;
-        margin-top: 0;
-    }
-
-    .nav {
-        display: none;
-    }
-
-    .list-vertical {
-        display: block;
     }
      
     [class^='pop-up__'] {

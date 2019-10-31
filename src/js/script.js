@@ -1,11 +1,23 @@
-const hamburger = document.querySelector('.fa-bars');
-const aside = document.querySelector('.aside');
-hamburger.addEventListener('click', function () {
-  aside.classList.toggle('hidden');
-});
-
 const navWrapper = document.querySelector('.nav');
 const asideWrapper = document.querySelector('.aside');
+
+/* Hamburger Menu */
+
+function toggleMenu (visible) {
+  asideWrapper.classList.toggle('show', visible);
+}
+
+asideWrapper.querySelector('.fa-bars').addEventListener('click', function (e) {
+  toggleMenu();
+});
+
+asideWrapper.querySelector('.icon-links').addEventListener('click', function (e) {
+  toggleMenu();
+});
+
+asideWrapper.querySelector('.icon-general').addEventListener('click', function (e) {
+  toggleMenu();
+});
 
 const navLogout = navWrapper.querySelector('.icon-quit');
 const navLogin = navWrapper.querySelector('.icon-profile');

@@ -1,3 +1,9 @@
+
+.nav, .aside {
+  position: fixed;
+  top: 0;
+}
+
 .aside {
   background: $main-dark-color;
   height: 100%;
@@ -5,7 +11,7 @@
   width: 200px;
   @include no-spacing;
   text-align: left;
-  transition: $transition-general;
+  transition: $transition-visibility;
   z-index: 1;
 
   &__logo {
@@ -31,19 +37,59 @@
 
     li:hover {
       border-left: 2px solid $detail-orange-color;
-      background: #2e2e2e;
+      background: $main-dark-hover;
     }
+  }
+
+  &__chat {
+    @include flex (row, center, flex-start);
+    padding: 0 10px;
+    flex-wrap: wrap;
+  
+    .chat__img {
+      overflow: hidden;
+      @include round-elem ($standard-box-height * 2.5);
+  
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transform: scale(2);
+      }
+    }
+      
+    a {
+      color: $detail-blue-color;
+      text-decoration: none;
+      padding: 0 8px;
+      position: relative;
+  
+      &::after {
+        background: $success-color;
+        @include round-elem ($standard-box-height / 1.5);
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        transform: translate(16%, 16%);
+        content: '';
+        z-index: 1;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
   }
 }
 
 .aside.hidden {
   transform: translateX(-160px);
   transition: $transition-general;
-}
 
-.aside.hidden ~ main {
-  margin-left: 40px;
-  transition: $transition-general;
+  ~ main {
+    margin-left: 40px;
+    transition: $transition-general;
+  }
 }
 
 .nav {
@@ -58,6 +104,7 @@
     height: 100%;
     @include centered-text ($standard-box-height * 3);
     @include flex (row, center, flex-end);
+    overflow: auto;
 
     > * {
       display: inline-block;
@@ -97,17 +144,8 @@
     font-size: $basic-font-size * 1.5;
     padding: 10px 7px;
     position: relative;
+    // display: block;
   }
-}
-
-.list-vertical {
-  text-align: right;
-  display: none;
-
-  > * {
-    padding: 5px 0;
-  }
-
 }
 
 section {
@@ -115,41 +153,6 @@ section {
   padding: 0;
   background: $main-light-color;
   box-shadow: -1px -1px 4px 1px $decoration-grey-color;
-}
-
-.manager {
-  @include flex (row, center, flex-start);
-  padding: 0 10px;
-
-  &__img {
-    overflow: hidden;
-    @include round-elem ($standard-box-height * 2.5);
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      transform: scale(2);
-    }
-  }
-    
-  a {
-    color: $detail-blue-color;
-    text-decoration: none;
-    padding: 0 8px;
-    position: relative;
-
-    &::after {
-      background: $success-color;
-      @include round-elem ($standard-box-height / 1.5);
-      position: absolute;
-      top: -16px;
-      left: -16px;
-      transform: translate(16%, 16%);
-      content: '';
-      z-index: 1;
-    }
-  }
 }
 
 .date-picker {
