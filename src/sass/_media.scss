@@ -63,9 +63,10 @@
     }
 
     .table {
-      
+        padding: 0 5px;
         &__row {
-          height: auto;  
+          height: auto;
+
         }
 
         td[class^='table__'] {
