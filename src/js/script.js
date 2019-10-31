@@ -1,4 +1,3 @@
-const navWrapper = document.querySelector('.nav');
 const asideWrapper = document.querySelector('.aside');
 
 /* Hamburger Menu */
@@ -19,60 +18,46 @@ asideWrapper.querySelector('.icon-general').addEventListener('click', function (
   toggleMenu();
 });
 
-const navLogout = navWrapper.querySelector('.icon-quit');
-const navLogin = navWrapper.querySelector('.icon-profile');
-
-const asideLogout = asideWrapper.querySelector('.icon-quit');
-const asideLogin = asideWrapper.querySelector('.icon-profile');
+const logoutButtons = document.querySelectorAll('.icon-quit');
+const loginButtons = document.querySelectorAll('.icon-profile');
 
 const modal = document.querySelector('.pop-up');
 const modalQuit = document.querySelector('.pop-up__quit');
 const modalLogin = document.querySelector('.pop-up__login');
 
-const quitButton = document.querySelector('.quit');
-const closeButton = document.querySelector('.icon-close');
+const quitButtons = document.querySelectorAll('.quit');
 
-
-navLogout.addEventListener('click', function () {
+function toggleModal () {
   event.preventDefault();
-  modal.classList.add('active');
-  modalQuit.classList.add('active');
-});
+  modal.classList.toggle('active');
+}
 
-asideLogout.addEventListener('click', function () {
-  event.preventDefault();
-  modal.classList.add('active');
-  modalQuit.classList.add('active');
-});
+for (let logoutButton of logoutButtons) {
+  logoutButton.addEventListener('click', function () {
+    toggleModal();
+    modalQuit.classList.add('active');
+  });
+}
 
-navLogin.addEventListener('click', function () {
-  event.preventDefault();
-  modal.classList.add('active');
-  modalLogin.classList.add('active');
-});
+for (let loginButton of loginButtons) {
+  loginButton.addEventListener('click', function () {
+    toggleModal();
+    modalLogin.classList.add('active');
+  });
+}
 
-asideLogin.addEventListener('click', function () {
-  event.preventDefault();
-  modal.classList.add('active');
-  modalLogin.classList.add('active');
-});
-
-quitButton.addEventListener('click', function () {
-  modal.classList.remove('active');
-  modalQuit.classList.remove('active');
-  modalLogin.classList.remove('active'); 
-});
-
-closeButton.addEventListener('click', function () {
-  modal.classList.remove('active');
-  modalQuit.classList.remove('active');
-  modalLogin.classList.remove('active'); 
-});
+for (let quitButton of quitButtons) {
+  quitButton.addEventListener('click', function () {
+    toggleModal();
+    modalLogin.classList.remove('active');
+    modalQuit.classList.remove('active');
+  });
+}
 
 window.addEventListener('click', function (event) {
   if (event.target == modal) {
     modal.classList.remove('active');
     modalQuit.classList.remove('active');
-    modalLogin.classList.remove('active'); 
+    modalLogin.classList.remove('active');
   }
 });
