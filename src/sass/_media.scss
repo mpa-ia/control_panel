@@ -1,149 +1,155 @@
 
 @media(max-width: 767px) {
-    @include grid('sm');
+  @include grid('sm');
 
-    .aside {
-        height: $standard-box-height * 2.5;
-        width: 100vw;
+  .aside {
+    height: $standard-box-height * 2.5;
+    width: 100vw;
         
-       &__logo {
-          margin: 0;
-          height: auto;
-          box-shadow: inset 0px -2px 1px 0px $main-lighten-color;
-        }
+    &__logo {
+      margin: 0;
+      height: auto;
+      box-shadow: inset 0px -2px 1px 0px $main-lighten-color;
+    }
       
-        &__links, &__menu, &__chat {
-            display: none;
-        }
+    &__links, &__menu, &__chat {
+      display: none;
+    }
+  }
+
+  .aside.show {
+    height: 100vh;
+    transition: $transition-visibility;
+    padding-bottom: 60px;
+
+    > .aside__logo, .aside__chat {
+      display: flex;
     }
 
-    .aside.show {
-        height: 100vh;
-        transition: $transition-visibility;
-
-        > .aside__logo, .aside__chat {
-            display: flex;
-        }
-
-        .aside__links {
-            display: block;
-        }
-
-        .aside__menu {
-            position: fixed;
-            bottom: 0;
-            @include centered-text ($standard-box-height * 2.5);
-            font-size: $basic-font-size;
-            background: $decoration-grey-color;
-            width: 100%;
-            @include flex (row, center, space-around);
-
-            > * {
-                display: inline-block;
-            }
-
-            a {
-               padding: 0px 3px;
-               color: $main-dark-hover;
-               display: block;
-            }
-        }
+    .aside__links {
+      display: block;
     }
 
-    main {
-        margin: 50px auto 20px auto;
-    }
+    .aside__menu {
+      position: fixed;
+      bottom: 0;
+      @include centered-text ($standard-box-height * 2.5);
+      font-size: $basic-font-size;
+      background: $decoration-grey-color;
+      width: 100%;
+      @include flex (row, center, space-around);
+      z-index: 2;
 
-    .nav {
-        display: none;
-    }
+      > * {
+        display: inline-block;
+      }
 
-    [class*='table'], tbody {
+      a {
+        padding: 0px 3px;
+        color: $main-dark-hover;
         display: block;
+      }
     }
+  }
 
-    .table {
-        padding: 0 5px;
-        &__row {
-          height: auto;
+  main {
+    margin: 50px auto 20px auto;
+  }
 
-        }
+  .nav {
+    display: none;
+  }
 
-        td[class^='table__'] {
-            padding: 2px 0;
-           
-            border: none;
-            border-bottom: 1px solid #eee;
-            width: 100%;
-            margin: 0 auto;
-        }
-         
-        &__icon {
-          opacity: 1;
+  [class*='table'], tbody {
+    display: block;
+  }
 
-        }
-    }
-}
-  
-  @media(min-width: 768px) {
-    @include grid('md');
-}
-  
-  @media(min-width: 992px) {
-    @include grid('lg');
-}
-  
-  @media(min-width: 1200px) {
-    @include grid('xl');
-}
-
-@media (max-width: 600px) {
-
-    .date-picker {
-        padding: 20px 0;
-
-        > * {
-            display: block;
-            margin: 8px auto;
-        }
-
-        span {
-            display: none;
-        }
-    }
-     
-    [class^='pop-up__'] {
-
-        p {
-            padding: 10px 5px;
-            width: 200px;
-        }
-
-        input {
-            display: block;
-            margin: 5px;
-        }
-
-        span {
-            display: none;
-        }
-    }
-}
-
-
-@media (max-height: 600px) {
-    .aside {
-        overflow: scroll;
+  .table {
+    padding: 0 5px;
         
-        &__links {
+    &__row {
+      height: auto;
 
-            > li {
-                @include centered-text ($standard-box-height * 1.5);
-            }
-
-            a {
-                font-size: $basic-font-size * 1.2; 
-            }
-        }
     }
+
+    td[class^='table__'] {
+      padding: 2px 0;
+           
+      border: none;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      margin: 0 auto;
+    }
+         
+    &__icon {
+      opacity: 1;
+
+    }
+  }
+
+  input {
+    display: block;
+    margin: 5px;
+  }
+
+  .date-picker {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .input-container {
+    padding: 8px 0;
+    border-radius: 0;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+
+    span {
+      display: none;
+    }
+
+    input {
+      border: $standard-border;
+      width: 100%;
+    }
+  }  
+
+  [class^='pop-up__'] {
+    width: 75%;
+  }
+
+  .pop-up__login {
+    text-align: center;
+
+  }
+
+  form {
+    fieldset {
+      margin: 10px auto;
+    }
+      
+    .form__input-container {
+      > * {
+        width: 96%;
+      }
+    }
+        
+    label {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+}
+  
+@media(min-width: 768px) {
+  @include grid('md');
+}
+  
+@media(min-width: 992px) {
+  @include grid('lg');
+}
+  
+@media(min-width: 1200px) {
+  @include grid('xl');
 }
