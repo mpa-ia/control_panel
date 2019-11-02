@@ -21,6 +21,8 @@ $transition-general: all 1s;
 $transition-background: background 0.5s;
 $transition-visibility: visibility 0.5s, linear 0.5s, opacity 0.5s;
 
+$standard-border: 1px solid $decoration-grey-color;
+
 /* Fonts */
 $logo-font: 'Satisfy', cursive;
 $decoration-font: 'Glyphter', Helvetica, Arial;
