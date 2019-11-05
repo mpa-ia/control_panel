@@ -295,6 +295,114 @@
             </div>
           </div>
         </section>
+        <section id="postback" class="postback">
+          <h2>New Postback</h2>
+          <div class="container">
+            <div class="row">
+              <form class="col-sm-12" action="" method="POST">
+                <fieldset>
+                  <legend>You can insert some parameters in this postback</legend>
+                  <div class="row">
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                      <label for="signup">Signup</label>
+                      <textarea name="signup" class="input">crm_userid=%user_id% subid=%p%</textarea>
+                    </div>
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                      <label for="deposit">Deposit</label>
+                      <textarea name="deposit" class="input">crm_userid=%user_id% subid=%p%</textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="postback__select-container col-sm-12 col-md-4">
+                      <label for="postback-type">Postback Type</label>
+                      <span class="icon-arrow-down-small"></span>
+                      <select name="postback-type" class="icon-arrow-down-small">
+                        <option value="S2S (http://..)">S2S (http://..)</option>
+                        <option value="Tracking Pixel">Tracking Pixel</option>
+                      </select>
+                    </div>
+                    <div class="postback__select-container col-sm-12 col-md-4">
+                      <label for="countries">To Countries</label>
+                      <span class="icon-arrow-down-small"></span>
+                      <select name="countries">
+                        <option value="" disabled selected>Select countries</option>
+                        <optgroup label="EMEA">
+                          <option value="German">German</option>
+                          <option value="France">France</option>
+                          <option value="Spain">Spain</option>
+                        </optgroup>
+                        <optgroup label="APAC">
+                          <option value="Singapore">Singapore</option>
+                          <option value="Malaysia">Malaysia</option>
+                          <option value="Australia">Australia</option>
+                        </optgroup>
+                        <optgroup label="NA">
+                          <option value="Canada">Canada</option>
+                          <option value="The United States of America">The United States of America</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <div class="postback__select-container col-sm-12 col-md-4">
+                      <label for="sending-options">Sending Options</label>
+                      <span class="icon-arrow-down-small"></span>
+                      <select name="sending-options">
+                        <option value="" disabled selected>Select</option>
+                        <option value="delay">Delay</option>
+                        <option value="immediately">Immediately</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="row">
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                      <label><strong>NOT</strong> send statuses</strong></label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="checkNumber">
+                        <span class="icon-close"></span>
+                        checkNumber
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="noAnswer">
+                        <span class="icon-close"></span>
+                        noAnswer
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="noCall">
+                        <span class="icon-close"></span>
+                        noCall
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="callAgain">
+                        <span class="icon-close"></span>
+                        callAgain
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="repeat">
+                        <span class="icon-close"></span>
+                        repeat
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="unknownNumber">
+                        <span class="icon-close"></span>
+                        unknownNumber
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="multiConversation">
+                        <span class="icon-close"></span>
+                        multiConversation
+                      </label>
+                    </div>
+                    <div class="postback__input-container col-sm-12 col-md-6">
+
+                    </div>
+                  </div>
+                </fieldset>
+                <button class="btn">Create Pixel</button>
+              </form>
+            </div>
+          </div>
+        </section>
         <!-- <a href="./styleguide.html">Style Guide</a> -->
       </div>
     </main>

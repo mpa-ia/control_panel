@@ -1,0 +1,104 @@
+.postback {
+  form {
+    width: 100%;
+    text-align: right;
+  }
+
+  legend {
+    font-size: $basic-font-size * 1.1;
+    text-align: left;
+  }
+
+  &__input-container {
+    padding: 0 10px;
+    height: 250px;
+    overflow: auto;
+  }
+
+  &__select-container {
+    padding: 0 5px;
+    position: relative;
+
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      right: 15%;
+      top: 60%;
+      transform: translate(-60%, -15%);
+      padding-right: 5px;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: calc(100% - 60px);
+    resize: none;
+    color: $text-grey-color;
+    font-size: $basic-font-size;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  label:not([class="label__custom"]) {
+    @extend .h4;
+
+    strong {
+      color: $error-color;
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @extend input;
+    width: 100%;
+    font-size: $basic-font-size * 1.1;
+    line-height: 1;
+  }
+}
+
+.label__custom {
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+  font-size: $basic-font-size * 1.1;
+  padding: 8px 0;
+    
+  input[type="checkbox"] {
+    position: absolute;
+    margin: 0;
+    width: $standard-box-height;
+    height: $standard-box-height;
+    opacity: 0;
+
+    + span {
+      display: inline-block;
+      width: $standard-box-height;
+      height: $standard-box-height;
+      border: $standard-border;
+      margin: 0 15px;
+
+      &::before {
+        opacity: 0;
+        padding: 0;
+        width: 100%;
+        @include centered-text ($standard-box-height);
+        text-align: center;
+      } 
+    }
+
+    &:checked + span {
+      border-color: $error-color;
+      background: $error-color;
+
+      &::before {
+        opacity: 1;
+        color: $main-light-color;
+
+      }
+    }
+  }
+}
