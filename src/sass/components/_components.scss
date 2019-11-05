@@ -7,7 +7,7 @@
   border-radius: 5px;
   @include centered-text($standard-box-height * 2);
   transition: $transition-background;
-  margin: 10px 0;
+  margin: 10px 5px;
 
   &:hover {
     cursor: pointer;
@@ -83,7 +83,7 @@
   opacity: 0;
   visibility: hidden;
   transition: $transition-visibility;
-  z-index: 2;
+  z-index: 3;
 }
 
 [class^='pop-up__'] {
@@ -96,15 +96,15 @@
   visibility: hidden;
   border-radius: 5px;
   padding: 5px;
-  z-index: 3;
+  z-index: 4;
   text-align: right;
   transition: $transition-visibility;
+  min-width: 50%;
 
   p {
     @include border;
     padding: 10px 5px;
     text-align: left;
-    width: 400px;
   }
 }
 
@@ -141,11 +141,6 @@ form {
   label {
     display: inline-block;
     text-align: left;
+    @extend .h4;
   }
-}
-
-
-.pop-up__login {
-  width: 500px;
-  margin: 0 auto;
 }
