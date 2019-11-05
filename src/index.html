@@ -111,9 +111,11 @@
                 </table>
             </div>
           </div>
-          <div class="general__chart">
+          <div class="container-fluid">
               <h3>Sales chart</h3>
-              <img src="https://s6.ifotos.pl/img/Excel-cha_qapxqsh.png"/>
+              <div class="chart-container">
+                  <canvas id="myChart"></canvas>
+              </div>
           </div>
         </section>
         <section id="links">
@@ -427,6 +429,7 @@
         <button class="btn --rectangle js--close-modal">Quit</button>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="js/script.js" type="module"></script>
   </body>
 </html>

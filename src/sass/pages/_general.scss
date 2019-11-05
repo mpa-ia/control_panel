@@ -1,11 +1,6 @@
-.general {
-  &__chart {
-    margin: 40px auto;
-    padding: 0 40px;
-    width: 100%;
-
-    img {
-      width: 100%;
-    }
-  }
+.chart-container {
+  width: 100%;
+  min-height: 40vh;
+  position: relative;
+  margin: 10px auto;
 }
