@@ -27,6 +27,16 @@ h3 {
   display: block;
 }
 
+.h4 {
+  padding: 8px 5px;
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-size: $basic-font-size * 1.2;
+  color: $text-grey-color;
+  font-weight: 600;
+}
+
 input {
   border-radius: 5px;
   @include centered-text($standard-box-height * 2);
