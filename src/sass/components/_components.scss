@@ -79,21 +79,17 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: $main-dark-color;
-  opacity: 0;
-  visibility: hidden;
+  background: transparentize($main-dark-color, 0.5);
   transition: $transition-visibility;
   z-index: 3;
+  display: none;
+  overflow: auto;
+  padding: 30px;
 }
 
 [class^='pop-up__'] {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, -20%);
   background: $main-light-color;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   border-radius: 5px;
   padding: 5px;
   z-index: 4;
@@ -108,17 +104,13 @@
   }
 }
 
-.active {
-  visibility: visible;
+.active.pop-up {
+  @include flex (row, center, center);
   transition: $transition-visibility;
 
-  &.pop-up {
-    opacity: 0.6;
-  }
-
-  &[class*='pop-up__'] {
-    opacity: 1;
-  }
+  .active[class^='pop-up__'] {
+    display: block;
+  } 
 }
 
 form {

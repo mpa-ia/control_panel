@@ -18,46 +18,54 @@ asideWrapper.querySelector('.icon-general').addEventListener('click', function (
   toggleMenu();
 });
 
+/* Buttons DOM */
 const logoutButtons = document.querySelectorAll('.icon-quit');
 const loginButtons = document.querySelectorAll('.icon-profile');
 
-const modal = document.querySelector('.pop-up');
+/* Modals DOM */
 const modalQuit = document.querySelector('.pop-up__quit');
 const modalLogin = document.querySelector('.pop-up__login');
 
-const quitButtons = document.querySelectorAll('.quit');
 
-function toggleModal () {
-  event.preventDefault();
-  modal.classList.toggle('active');
+function closeModal() {
+  document.getElementById('pop-up-overlay').classList.remove('active')
+}
+
+document.querySelectorAll('#pop-up-overlay .js--close-modal').forEach(function(btn) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    closeModal();
+  });
+});
+
+document.querySelector('#pop-up-overlay').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keyup', function (e) {
+  if (e.keyCode === 27) {
+    closeModal();
+  }
+});
+
+function openModal (modal) {
+  document.querySelectorAll('#pop-up-overlay > *').forEach(function (modal) {
+    modal.classList.remove('active');
+  });
+  document.querySelector('#pop-up-overlay').classList.add('active');
+  modal.classList.add('active');
 }
 
 for (let logoutButton of logoutButtons) {
   logoutButton.addEventListener('click', function () {
-    toggleModal();
-    modalQuit.classList.add('active');
+    openModal(modalQuit);
   });
 }
 
 for (let loginButton of loginButtons) {
   loginButton.addEventListener('click', function () {
-    toggleModal();
-    modalLogin.classList.add('active');
+    openModal(modalLogin);
   });
 }
-
-for (let quitButton of quitButtons) {
-  quitButton.addEventListener('click', function () {
-    toggleModal();
-    modalLogin.classList.remove('active');
-    modalQuit.classList.remove('active');
-  });
-}
-
-window.addEventListener('click', function (event) {
-  if (event.target == modal) {
-    modal.classList.remove('active');
-    modalQuit.classList.remove('active');
-    modalLogin.classList.remove('active');
-  }
-});

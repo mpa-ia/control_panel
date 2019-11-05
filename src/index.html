@@ -407,29 +407,26 @@
       </div>
     </main>
     <!-- Modals -->
-    <div class="pop-up">
-    </div>
-    
-    <!-- Login modal -->
-    <div class="pop-up__login">
-      <h2>Login</h2>
-      <div class="input-container">
+    <div class="pop-up" id="pop-up-overlay">
+      <!-- Login modal -->
+      <div class="pop-up__login">
+        <h2>Login</h2>
+        <div class="input-container">
           <span class="icon-personaldata"></span>
-          <input name="login-username" type="text" placeholder="username"/>
+          <input name="login-username" type="text" placeholder="username" />
           <span class="icon-password"></span>
-          <input name="login-password" type="password" placeholder="password"/>
+          <input name="login-password" type="password" placeholder="password" />
+        </div>
+        <button class="btn --rectangle">Enter</button>
       </div>
-      <button class="btn --rectangle">Enter</button>
+      <!-- Quit modal -->
+      <div class="pop-up__quit">
+        <button class="btn icon-close js--close-modal"></button>
+        <p>Do you really want to Quit?</p>
+        <button class="btn --rectangle">Cancel</button>
+        <button class="btn --rectangle js--close-modal">Quit</button>
+      </div>
     </div>
-
-    <!-- Quit modal -->
-    <div class="pop-up__quit">
-      <button class="btn icon-close quit"></button>
-      <p>Do you really want to Quit?</p>
-      <button class="btn --rectangle">Cancel</button>
-      <button class="btn --rectangle quit">Quit</button>
-    </div>
-
     <script src="js/script.js" type="module"></script>
   </body>
 </html>
