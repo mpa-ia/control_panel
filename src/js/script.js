@@ -1,3 +1,6 @@
+/* global Chart, $ */
+/* eslint no-undef: "error" */
+
 const asideWrapper = document.querySelector('.aside');
 
 /* Hamburger Menu */
@@ -28,7 +31,7 @@ const modalLogin = document.querySelector('.pop-up__login');
 
 
 function closeModal() {
-  document.getElementById('pop-up-overlay').classList.remove('active')
+  document.getElementById('pop-up-overlay').classList.remove('active');
 }
 
 document.querySelectorAll('#pop-up-overlay .js--close-modal').forEach(function(btn) {
@@ -109,3 +112,45 @@ var chart = new Chart(ctx, {
   },
   
 });
+console.log(chart);
+
+/* Range Slider */
+
+const valueBubble = '<output class="rangeslider__value-bubble" />';
+const labels = '<div class="rangeslider__labels"></div>';
+const elem = $('input[type="range"]');
+
+// get range index labels 
+let rangeLabels = elem.attr('labels');
+rangeLabels = rangeLabels.split(', ');
+
+function updateValueBubble(pos, value, context) {
+  pos = pos || context.position;
+  value = value || context.value;
+  var $valueBubble = $('.rangeslider__value-bubble', context.$range);
+  var tempPosition = pos + context.grabPos;
+  var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
+
+  if ($valueBubble.length) {
+    $valueBubble[0].style.left = Math.ceil(position) + 'px';
+    $valueBubble[0].innerHTML = value + ' ';
+  }
+}
+
+$('input[type="range"]').rangeslider({polyfill: false, 
+  onInit: function() {
+    const $rangeElem = this.$range;
+    $rangeElem.append($(valueBubble));
+    updateValueBubble(null, null, this);
+    $rangeElem.append($(labels));
+    $(rangeLabels).each(function(index, value) {
+      $rangeElem.find('.rangeslider__labels').append('<span class="rangeslider__labels__label">' + value + '</span>');
+    });
+  },
+  onSlide: function(pos, value) {
+    updateValueBubble(pos, value, this);
+    let $handle = this.$range.find('.rangeslider__handle__value');
+    $handle.text(this.value);
+  }
+});
+$('input[type="range"]').rangeslider('update', true);

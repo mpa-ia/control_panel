@@ -33,6 +33,6 @@
           "error", { "args": "none" }]
     },
     "globals": {
-      "Handlebars": false
+      "rangeSlider": false
     }
 }

@@ -28,7 +28,6 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-
     "devDependencies": {
         "autoprefixer-cli": "^1.0.0",
         "browser-sync": "^2.26.3",
@@ -42,5 +41,8 @@
         "onchange": "^5.2.0",
         "stylelint": "^9.10.1",
         "stylelint-scss": "^3.5.4"
+    },
+    "dependencies": {
+        "rangeslider.js": "^2.3.3"
     }
 }

@@ -44,3 +44,25 @@
   border-radius: 50%;
   margin: 0;
 }
+
+@mixin position($top: 50%, $left: 50%, $horizontal: -50%, $vertical: -50%, $bottom: auto) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  transform: translate($horizontal, $vertical);
+  -webkit-transform: translate($horizontal, $vertical);
+  -ms-transform: translate($horizontal, $vertical);
+}
+
+@mixin resize($x, $y) {
+  -ms-transform: scale($x, $y); /* IE 9 */
+  -webkit-transform: scale($x, $y); /* Safari */
+  transform: scale($x, $y); 
+}
+
+@mixin transition($target: all, $duration: .3s) {
+  transition: $target $duration ease-in-out;
+  -moz-transition: $target $duration ease-in-out;
+  -webkit-transition: $target $duration ease-in-out;
+}

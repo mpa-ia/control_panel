@@ -102,3 +102,77 @@
     }
   }
 }
+
+/* Custom Range Slider */
+
+.range-slider-wrapper {
+  @include centered-text (calc(100% - 40px));
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rangeslider {
+  top: 50%;
+  background-color: $decoration-grey-color;
+  border-radius: 0;
+  height: 0.2rem;
+  position: relative;
+
+  &__labels {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    
+    &__label {
+      font-size: 0.75em;
+      position: relative;
+      padding-top: 15px;
+      color: $text-grey-color;
+    }
+  }
+
+  &__fill {
+    background-color: $detail-orange-color;
+    border-radius: 0;
+  }
+
+  &__handle {
+    width: $standard-box-height;
+    height: $standard-box-height;
+    position: absolute;
+    @include transition(transform);
+    
+    &::after {
+      display: none;
+    }
+  
+    &:hover, &:active {
+      @include resize(1.2,1.2);
+      @include transition(transform, .1s);
+    }
+  }
+
+  &__value-bubble {
+    @include position(auto, 50%,-50%,0, 2.5rem);
+    text-align: center;
+    background-color: $detail-orange-color;
+    padding: 1rem;
+    color: $decoration-grey-color;
+    width: auto;
+    margin: 0;
+    white-space: nowrap;
+    
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-top: 1rem solid $detail-orange-color;
+  
+      @include position(auto, 50%, -50%, -45%, -1rem);
+    }
+  }
+}
