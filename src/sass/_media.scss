@@ -22,11 +22,11 @@
     transition: $transition-visibility;
     padding-bottom: 60px;
 
-    > .aside__logo, .aside__chat {
+    > .aside__logo {
       display: flex;
     }
 
-    .aside__links {
+    .aside__links, .aside__chat {
       display: block;
     }
 
