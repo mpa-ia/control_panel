@@ -23,7 +23,7 @@ asideWrapper.querySelector('.icon-general').addEventListener('click', function (
 
 /* Buttons DOM */
 const logoutButtons = document.querySelectorAll('.icon-quit');
-const loginButtons = document.querySelectorAll('.icon-profile');
+const loginButtons = document.querySelectorAll('.login-panel');
 const chatButton = document.querySelector('#chat-link');
 
 /* Modals DOM */
