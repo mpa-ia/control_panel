@@ -140,6 +140,21 @@
     }
   }
 
+  .chat__header {
+    padding: 15px 10px;
+  
+    .img-box {
+      @include round-elem ($standard-box-height * 2);
+    }
+  
+    span {
+      font-size: $basic-font-size;
+      
+      &::after {
+        content: '';
+      }
+    }
+  }
 }
   
 @media(min-width: 768px) {

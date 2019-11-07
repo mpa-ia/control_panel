@@ -35,3 +35,52 @@
     display: block;
   } 
 }
+
+[class^='chat'] {
+  @include border;
+  padding: 15px 10px;
+  text-align: left;
+
+}
+
+.chat__header {
+  @include flex (row, center, flex-start);
+  padding: 15px 10px;
+
+  .img-box {
+    @include round-elem ($standard-box-height * 4);
+  }
+
+  span {
+    font-size: $basic-font-size * 2;
+    padding-left: 8px;
+    padding-bottom: 15px;
+    position: relative;
+
+    &::after {
+      content: 'online';
+      background: $success-color;
+      font-size: $basic-font-size;
+      border-radius: 5px;
+      color: $main-light-color;
+      padding: 0 2px;
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+    }
+  }
+}
+
+.chat__conversation {
+  height: 40vh;
+  overflow: auto;
+}
+
+.chat__message {
+  @include flex (row, center, space-around);
+
+  textarea {
+    width: calc(100% - 60px);
+    height: 40px
+  }
+}

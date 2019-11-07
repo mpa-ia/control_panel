@@ -24,11 +24,12 @@ asideWrapper.querySelector('.icon-general').addEventListener('click', function (
 /* Buttons DOM */
 const logoutButtons = document.querySelectorAll('.icon-quit');
 const loginButtons = document.querySelectorAll('.icon-profile');
+const chatButton = document.querySelector('#chat-link');
 
 /* Modals DOM */
 const modalQuit = document.querySelector('.modal__quit');
 const modalLogin = document.querySelector('.modal__login');
-
+const modalChat = document.querySelector('.modal__chat');
 
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('active');
@@ -72,6 +73,10 @@ for (let loginButton of loginButtons) {
     openModal(modalLogin);
   });
 }
+
+chatButton.addEventListener('click', function () {
+  openModal(modalChat);
+});
 
 /* Chart */
 
