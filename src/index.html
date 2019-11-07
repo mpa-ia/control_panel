@@ -420,9 +420,9 @@
       </div>
     </main>
     <!-- Modals -->
-    <div class="pop-up" id="pop-up-overlay">
+    <div class="modal" id="modal-overlay">
       <!-- Login modal -->
-      <div class="pop-up__login">
+      <div class="modal__login">
         <h2>Login</h2>
         <div class="input-container">
           <span class="icon-personaldata"></span>
@@ -433,12 +433,14 @@
         <button class="btn --rectangle">Enter</button>
       </div>
       <!-- Quit modal -->
-      <div class="pop-up__quit">
-        <button class="btn icon-close js--close-modal"></button>
-        <p>Do you really want to Quit?</p>
+      <div class="modal__quit">
+        <h2>
+          <span>Do you really want to Quit?</span>
+          <span class="icon-close js--close-modal"></span>
+        </h2>
         <button class="btn --rectangle">Cancel</button>
         <button class="btn --rectangle js--close-modal">Quit</button>
-      </div>
+      </div>  
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

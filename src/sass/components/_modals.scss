@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparentize($main-dark-color, 0.5);
+  transition: $transition-visibility;
+  z-index: 3;
+  display: none;
+  overflow: auto;
+  padding: 30px;
+}
+  
+[class^='modal__'] {
+  background: $main-light-color;
+  display: none;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 4;
+  text-align: right;
+  transition: $transition-visibility;
+  min-width: 50%;
+
+  h2 {
+    @include flex (row, center, space-between);
+  }
+}
+  
+.active.modal {
+  @include flex (row, center, center);
+  transition: $transition-visibility;
+
+  .active[class^='modal__'] {
+    display: block;
+  } 
+}

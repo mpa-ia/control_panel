@@ -26,22 +26,22 @@ const logoutButtons = document.querySelectorAll('.icon-quit');
 const loginButtons = document.querySelectorAll('.icon-profile');
 
 /* Modals DOM */
-const modalQuit = document.querySelector('.pop-up__quit');
-const modalLogin = document.querySelector('.pop-up__login');
+const modalQuit = document.querySelector('.modal__quit');
+const modalLogin = document.querySelector('.modal__login');
 
 
 function closeModal() {
-  document.getElementById('pop-up-overlay').classList.remove('active');
+  document.getElementById('modal-overlay').classList.remove('active');
 }
 
-document.querySelectorAll('#pop-up-overlay .js--close-modal').forEach(function(btn) {
+document.querySelectorAll('#modal-overlay .js--close-modal').forEach(function(btn) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
     closeModal();
   });
 });
 
-document.querySelector('#pop-up-overlay').addEventListener('click', function (e) {
+document.querySelector('#modal-overlay').addEventListener('click', function (e) {
   if (e.target === this) {
     closeModal();
   }
@@ -54,10 +54,10 @@ document.addEventListener('keyup', function (e) {
 });
 
 function openModal (modal) {
-  document.querySelectorAll('#pop-up-overlay > *').forEach(function (modal) {
+  document.querySelectorAll('#modal-overlay > *').forEach(function (modal) {
     modal.classList.remove('active');
   });
-  document.querySelector('#pop-up-overlay').classList.add('active');
+  document.querySelector('#modal-overlay').classList.add('active');
   modal.classList.add('active');
 }
 
