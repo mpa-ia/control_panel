@@ -13,12 +13,10 @@ asideWrapper.querySelector('.fa-bars').addEventListener('click', function (e) {
   toggleMenu();
 });
 
-asideWrapper.querySelector('.icon-links').addEventListener('click', function (e) {
-  toggleMenu();
-});
-
-asideWrapper.querySelector('.icon-general').addEventListener('click', function (e) {
-  toggleMenu();
+asideWrapper.querySelectorAll('.aside__links a').forEach(function (link){
+  link.addEventListener('click', function (e) {
+    toggleMenu();
+  });
 });
 
 /* Buttons DOM */
