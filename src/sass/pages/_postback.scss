@@ -34,11 +34,6 @@
   textarea {
     width: 100%;
     height: calc(100% - 60px);
-    resize: none;
-    color: $text-grey-color;
-    font-size: $basic-font-size;
-    padding: 10px;
-    border-radius: 5px;
   }
 
   label:not([class="label__custom"]) {

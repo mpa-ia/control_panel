@@ -61,3 +61,12 @@ em {
     transform: scale(1.5);
   }
 }
+
+textarea {
+  resize: none;
+  color: $text-grey-color;
+  font-size: $basic-font-size;
+  padding: 10px;
+  border-radius: 5px;
+  border: $standard-border;
+}
