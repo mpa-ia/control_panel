@@ -142,15 +142,13 @@ section {
 .date-picker {
   @include border;
   padding: 40px 0;
-  text-align: center;
+  @include flex (row, center, center);
 }
 
 .input-container {
   border: $standard-border;
   border-radius: 5px;
-  display: inline-block;
-  margin: 5px auto;
-  text-align: center;
+  margin: 5px;
 
   input {
     border: none;
