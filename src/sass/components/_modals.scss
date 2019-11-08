@@ -26,14 +26,20 @@
     @include flex (row, center, space-between);
   }
 }
-  
+
+
 .active.modal {
   @include flex (row, center, center);
   transition: $transition-visibility;
 
   .active[class^='modal__'] {
     display: block;
-  } 
+  }
+  .active.modal__login {
+    @include flex (row, center, center);
+    flex-wrap: wrap;
+  }
+  
 }
 
 [class^='chat'] {
