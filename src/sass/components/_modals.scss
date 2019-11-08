@@ -78,9 +78,19 @@
 
 .chat__message {
   @include flex (row, center, space-around);
+  position: relative;
 
   textarea {
     width: calc(100% - 60px);
-    height: 40px
+    height: 40px;
+    padding-left: 35px;
+
+  }
+
+  span {
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    color: $text-grey-color;
   }
 }
