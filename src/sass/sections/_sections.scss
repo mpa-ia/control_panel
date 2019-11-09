@@ -48,16 +48,23 @@
     a {
       @include flex (row, center, flex-start);
       text-decoration: none;
+
     }
 
     .img-box {
       @include round-elem ($standard-box-height * 2.5);
+
     }
       
     span {
       color: $detail-blue-color;
       padding: 0 8px;
       position: relative;
+      transition: $transition-general;
+
+      &:hover {
+        color: $detail-orange-color;
+      }
   
       &::after {
         background: $success-color;
@@ -70,6 +77,8 @@
         z-index: 1;
       }
     }
+
+
   }
 
   &__menu {
