@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Control Panel</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Saira+Condensed:300,600|Satisfy&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/rangeslider.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <aside class="aside">
+      <div class="aside__logo">
+        <h1>Just Do It!</h1>
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="aside__links un-list">
+        <li>
+          <a class="icon-general" href="#general">General</a>
+        </li>
+        <li>
+          <a class="icon-details" href="#details">Details</a>
+        </li>
+        <li>
+          <a class="icon-links" href="#links">Links</a>
+        </li>
+        <li>
+          <a class="icon-banners" href="#banners">Banners</a>
+        </li>
+        <li>
+          <a class="icon-personaldata" href="#personal-data">Personal Data</a>
+        </li>
+        <li>
+          <a class="icon-postback" href="#postback">Postback</a>
+        </li>
+      </ul>
+      <div class="aside__chat">
+          <h3>Your Manager</h3>
+          <a href="#chat" id="chat-link">
+            <div class="img-box">
+                <img src="https://iv.pl/images/27774122c651ad3a5af580ebfdd08300.th.jpg" />
+            </div>
+            <span>Mikhael E.</span>
+          </a>
+      </div>
+      <ul class="aside__menu un-list">
+          <li>
+              <a class="icon-wallet" href="#wallet">$ 1,500.00</a>
+          </li>
+          <li>
+              <a class="icon-notification" href="#notification"></a>
+          </li>
+          <li>
+              <a class="icon-profile login-panel" href="#modal-login"></a>
+          </li>
+          <li>
+              <a class="icon-quit" href="#logout"></a>
+          </li>
+      </ul>
+    </aside>
+    <nav class="nav">
+      <ul class="nav__links un-list">
+        <li>
+          <a class="icon-wallet" href="#wallet">$ 1,500.00
+            <span class="icon-arrow-down-small"></span>
+          </a>
+        </li>
+        <li>
+          <a class="icon-notification" href="#notification"></a>
+        </li>
+        <li>
+          <a href="#modal-login" class="login-panel">
+            <span class="icon-profile"></span>
+            <em>Leonardo DiCaprio</em>
+          </a>
+        </li>
+        <li>
+          <a class="icon-quit" href="#logout"></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <section id="general" class="general">
+          <h2>General Statistic</h2>
+          <div class="date-picker">
+            <div class="input-container">
+              <input name="date-from" type="date">
+              <input name="date-for" type="date">
+              <span class="icon-calendar"></span>
+            </div>
+            <button type="submit" class="btn icon-refresh"></button>
+          </div>
+          <div class="container">
+            <div class="row">
+                <table class="table col-sm-6 col-md-4">
+                    <tr class="table__row">
+                        <td class="table__title">Visit Signups</td>
+                        <td class="table__data">124</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__title">FTD</td>
+                        <td class="table__data">445</td>
+                    </tr>
+                </table>
+                <table class="table col-sm-6 col-md-4">
+                    <tr class="table__row">
+                        <td class="table__title">Net Deposit</td>
+                        <td class="table__data">564</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__title">Turn Over</td>
+                        <td class="table__data">432</td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <div class="container-fluid">
+              <h3>Sales chart</h3>
+              <div class="chart-container">
+                  <canvas id="myChart"></canvas>
+              </div>
+          </div>
+        </section>
+        <section id="links">
+          <h2>Links</h2>
+          <div class="container">
+            <button class="btn --rectangle">+ add new</button>
+            <div class="row">
+              <table class="table col-sm-12 col-md-9 col-lg-6">
+                  <tr class="table__row">
+                      <td class="table__title">Home Page</td>
+                      <td class="table__link">
+                          <a href="http://www.homepage.com">http://www.homepage.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Currently offer</td>
+                      <td class="table__link">
+                          <a href="http://www.currently.com">http://www.currently.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Blurpix</td>
+                      <td class="table__link">
+                          <a href="http://www.blurpix.com">http://www.blurpix.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Your Site</td>
+                      <td class="table__link">
+                          <a href="http://www.yoursite.com">http://www.yoursite.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Google</td>
+                      <td class="table__link">
+                          <a href="http://www.google.com">http://www.google.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Facebook</td>
+                      <td class="table__link">
+                          <a href="http://www.facebook.com">http://www.facebook.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Dashboard</td>
+                      <td class="table__link">
+                          <a href="http://www.dashboard.com">http://www.dashboard.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Blurax</td>
+                      <td class="table__link">
+                          <a href="http://www.blurax.com">http://www.blurax.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Home Page</td>
+                      <td class="table__link">
+                          <a href="http://www.homepage.com">http://www.homepage.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Piece of  Wine</td>
+                      <td class="table__link">
+                          <a href="http://www.pieceofwine.com">http://www.pieceofwine.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+                  <tr class="table__row">
+                      <td class="table__title">Twitter</td>
+                      <td class="table__link">
+                          <a href="http://www.twitter.com">http://www.twitter.com</a>
+                      </td>
+                      <td class="table__icon">
+                          <a class="icon-links"></a>
+                          <a class="icon-trash"></a>
+                      </td>
+                  </tr>
+              </table>
+            </div>
+            <button class="btn --rectangle">+ add new</button>
+          </div>
+        </section>
+        <section id="personal-data">
+          <h2>Personal Data</h2>
+          <div class="container">
+            <div class="row">
+              <form class="col-sm-12 col-md-10 col-lg-8" action="" method="POST">
+                <fieldset>
+                  <div class="form__input-container">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" required>
+                  </div>
+                  <div class="form__input-container">
+                    <label for="surname">Surname</label>
+                    <input name="surname" type="text" required>
+                  </div>
+                  <div class="form__input-container">
+                    <label for="email">E-mail</label>
+                    <input name="email" type="email" required>
+                  </div>
+                  <div class="form__input-container">
+                    <label for="phone">Phone Number</label>
+                    <input name="phone" type="text">
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="form__input-container">
+                    <label for="skype">Skype</label>
+                    <input name="skype" type="text">
+                  </div>
+                  <div class="form__input-container">
+                    <label for="icq">ICQ</label>
+                    <input name="icq" type="text">
+                  </div>
+                  <div class="form__input-container">
+                    <label for="msn">Msn</label>
+                    <input name="msn" type="text">
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="form__input-container">
+                    <label for="wallet">Wallet</label>
+                    <input name="wallet" type="text">
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="form__input-container">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" required>
+                  </div>
+                  <div class="form__input-container">
+                    <label for="password-repeat">Repeat Password</label>
+                    <input name="password-repeat" type="password" required>
+                  </div>
+                </fieldset>
+                <button class="btn --rectangle" type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section id="postback" class="postback">
+          <h2>New Postback</h2>
+          <div class="container">
+            <div class="row">
+              <form class="col-sm-12" action="" method="POST">
+                <fieldset>
+                  <legend>You can insert some parameters in this postback</legend>
+                  <div class="row">
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                      <label for="signup">Signup</label>
+                      <textarea name="signup" class="input" placeholder="crm_userid=%user_id% &#10subid=%p%"></textarea>
+                    </div>
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                      <label for="deposit">Deposit</label>
+                      <textarea name="deposit" class="input" placeholder="crm_userid=%user_id% &#10subid=%p%"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="postback__select-container col-sm-12 col-md-4">
+                      <label for="postback-type">Postback Type</label>
+                      <span class="icon-arrow-down-small"></span>
+                      <select name="postback-type" class="icon-arrow-down-small">
+                        <option value="S2S (http://..)">S2S (http://..)</option>
+                        <option value="Tracking Pixel">Tracking Pixel</option>
+                      </select>
+                    </div>
+                    <div class="postback__select-container col-sm-12 col-md-4">
+                      <label for="countries">To Countries</label>
+                      <span class="icon-arrow-down-small"></span>
+                      <select name="countries">
+                        <option value="" disabled selected>Select countries</option>
+                        <optgroup label="EMEA">
+                          <option value="German">German</option>
+                          <option value="France">France</option>
+                          <option value="Spain">Spain</option>
+                        </optgroup>
+                        <optgroup label="APAC">
+                          <option value="Singapore">Singapore</option>
+                          <option value="Malaysia">Malaysia</option>
+                          <option value="Australia">Australia</option>
+                        </optgroup>
+                        <optgroup label="NA">
+                          <option value="Canada">Canada</option>
+                          <option value="The United States of America">The United States of America</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <div class="postback__select-container col-sm-12 col-md-4">
+                      <label for="sending-options">Sending Options</label>
+                      <span class="icon-arrow-down-small"></span>
+                      <select name="sending-options">
+                        <option value="" disabled selected>Select</option>
+                        <option value="delay">Delay</option>
+                        <option value="immediately">Immediately</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="row">
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                      <label><strong>NOT</strong> send statuses</strong></label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="checkNumber">
+                        <span class="icon-close"></span>
+                        checkNumber
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="noAnswer">
+                        <span class="icon-close"></span>
+                        noAnswer
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="noCall">
+                        <span class="icon-close"></span>
+                        noCall
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="callAgain">
+                        <span class="icon-close"></span>
+                        callAgain
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="repeat">
+                        <span class="icon-close"></span>
+                        repeat
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="unknownNumber">
+                        <span class="icon-close"></span>
+                        unknownNumber
+                      </label>
+                      <label class="label__custom">
+                        <input name="not-send-statuses" type="checkbox" value="multiConversation">
+                        <span class="icon-close"></span>
+                        multiConversation
+                      </label>
+                    </div>
+                    <div class="postback__input-container col-sm-12 col-md-6">
+                        <label for="send-after">Send after:</label>
+                        <div class="range-slider-wrapper">
+                          <input name="send-after" type="range" min="0" max="168" step="2" labels="0, 168">
+                        </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <button class="btn">Create Pixel</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- <a href="./styleguide.html">Style Guide</a> -->
+      </div>
+    </main>
+    <!-- Modals -->
+    <div class="modal" id="modal-overlay">
+      <!-- Login modal -->
+      <div class="modal__login" id="modal-login">
+        <h2>Login</h2>
+        <div class="input-container">
+          <span class="icon-personaldata"></span>
+          <input name="login-username" type="text" placeholder="username" />
+          <span class="icon-password"></span>
+          <input name="login-password" type="password" placeholder="password" />
+        </div>
+        <button class="btn --rectangle">Enter</button>
+      </div>
+      <!-- Quit modal -->
+      <div class="modal__quit">
+        <h2>
+          <span>Do you really want to Quit?</span>
+          <span class="icon-close js--close-modal"></span>
+        </h2>
+        <button class="btn --rectangle">Cancel</button>
+        <button class="btn --rectangle js--close-modal">Quit</button>
+      </div>
+      <div class="modal__chat">
+        <h2><span>Online Chat with your personal manager</span><span class="icon-close js--close-modal"></span></h2>
+        <div class="chat__header">
+          <div class="img-box">
+            <img src="https://iv.pl/images/27774122c651ad3a5af580ebfdd08300.th.jpg" />
+          </div>
+          <span>Mikhael E.</span>
+        </div>
+        <div class="chat__conversation">
+      
+        </div>
+        <div class="chat__message">
+          <span class="icon-message"></span>
+          <textarea placeholder="Enter the message"></textarea>
+          <button type="submit" class="btn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="vendor/rangeslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
