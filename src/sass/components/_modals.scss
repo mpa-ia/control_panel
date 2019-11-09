@@ -35,6 +35,7 @@
   .active[class^='modal__'] {
     display: block;
   }
+
   .active.modal__login {
     @include flex (row, center, center);
     flex-wrap: wrap;
