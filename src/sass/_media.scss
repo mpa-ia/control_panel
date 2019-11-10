@@ -1,10 +1,10 @@
-
 @media(max-width: 767px) {
   @include grid('sm');
 
   .aside {
     height: $standard-box-height * 2.5;
     width: 100vw;
+    left: 0;
         
     &__logo {
       margin: 0;
@@ -21,6 +21,11 @@
     height: 100vh;
     transition: $transition-visibility;
     padding-bottom: 60px;
+    transform: translateX(0);
+
+    ~ main {
+      margin: 15px 10px;
+    }
 
     > .aside__logo {
       display: flex;
@@ -39,21 +44,17 @@
       width: 100%;
       @include flex (row, center, space-around);
       z-index: 2;
-
-      > * {
-        display: inline-block;
-      }
+      list-style: none;
 
       a {
-        padding: 0px 3px;
+        padding: 0 3px;
         color: $main-dark-hover;
-        display: block;
       }
     }
   }
 
   main {
-    margin: 50px auto 20px auto;
+    margin: 15px 10px;
   }
 
   .nav {
@@ -69,21 +70,17 @@
         
     &__row {
       height: auto;
-
     }
 
     td[class^='table__'] {
       padding: 2px 0;
-           
       border: none;
-      border-bottom: 1px solid #eee;
       width: 100%;
       margin: 0 auto;
     }
          
     &__icon {
       opacity: 1;
-
     }
   }
 
@@ -107,17 +104,7 @@
 
     input {
       border: $standard-border;
-      width: 100%;
     }
-  }  
-
-  [class^='pop-up__'] {
-    width: 75%;
-  }
-
-  .pop-up__login {
-    text-align: center;
-
   }
 
   form {
