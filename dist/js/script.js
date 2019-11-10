@@ -127,6 +127,8 @@ const elem = $('input[type="range"]');
 let rangeLabels = elem.attr('labels');
 rangeLabels = rangeLabels.split(', ');
 
+const unit = elem.attr('unit');
+
 function updateValueBubble(pos, value, context) {
   pos = pos || context.position;
   value = value || context.value;
@@ -136,7 +138,7 @@ function updateValueBubble(pos, value, context) {
 
   if ($valueBubble.length) {
     $valueBubble[0].style.left = Math.ceil(position) + 'px';
-    $valueBubble[0].innerHTML = value + ' ';
+    $valueBubble[0].innerHTML = value + ' ' + unit;
   }
 }
 
