@@ -31,21 +31,10 @@
   }
 
   &__links {
-    /*     > li {
-
-      //display: block;
-
-    } */
-
-    /*     li:hover {
-
-    } */
 
     a {
       display: block;
       width: 100%;
-      // height: 100%;
-      @include centered-text ($standard-box-height * 2.3);
       border-left: 2px solid $main-dark-color;
 
       &:hover {
