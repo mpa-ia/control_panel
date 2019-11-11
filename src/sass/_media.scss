@@ -21,7 +21,7 @@
     height: 100vh;
     transition: $transition-visibility;
     padding-bottom: 60px;
-    transform: translateX(0);
+    // transform: translateX(0);
 
     ~ main {
       margin: 15px 10px;
@@ -46,9 +46,14 @@
       z-index: 2;
       list-style: none;
 
+      /* > * {	
+        display: inline-block;	
+      } */
+
       a {
         padding: 0 3px;
         color: $main-dark-hover;
+        display: block;
       }
     }
   }

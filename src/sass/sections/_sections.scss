@@ -85,7 +85,7 @@
 }
 
 .aside.show {
-  transform: translateX(160px);
+  left: 0;
   transition: $transition-general;
 
   ~ main {
