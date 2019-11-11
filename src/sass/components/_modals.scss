@@ -24,6 +24,10 @@
 
   h2 {
     @include flex (row, center, space-between);
+
+    span:last-child {
+      padding-left: 15px;
+    }
   }
 }
 
@@ -89,7 +93,6 @@
     width: calc(100% - 60px);
     height: 40px;
     padding-left: 35px;
-
   }
 
   span {

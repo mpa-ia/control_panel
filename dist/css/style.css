@@ -732,6 +732,10 @@ form label {
       justify-content: space-between;
 }
 
+[class^='modal__'] h2 span:last-child {
+  padding-left: 15px;
+}
+
 .active.modal {
   display: -ms-flexbox;
   display: flex;
