@@ -43,11 +43,9 @@
   
 }
 
-[class^='chat'] {
+[class^='chat']:not(.chat__message) {
   @include border;
   padding: 15px 10px;
-  text-align: left;
-
 }
 
 .chat__header {
@@ -97,7 +95,7 @@
   span {
     position: absolute;
     z-index: 2;
-    left: 15px;
+    left: 6px;
     color: $text-grey-color;
   }
 }
